@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao Bloger !</h1>
+  <p class="lead">Bloger é um sistema de post onde você pode publicar e compatilhar inforações sobre os seus assutos preferidos!</p>
+  <hr class="my-4">
+  <p>Não perca tempo, cadastre-se para poder começar a ter acesso as melhores informações do mundo !!! É simples e rapido !!!</p>
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie sua conta</a>
+</div>
+
+<hr>
+
+<h2>Últimas publicações</h2>
+
+
+{{#each postagens}}
+<div class="card mt-4">
+     <div class="card-body">
+         <h3>{{titulo}}</h3>
+         <p>{{descricao}}</p>
+         <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+         <hr>
+           <small>Categoria: <strong>{{categoria.nome}}</strong></small><br>
+           <small>Data de publicação: {{data}}</small>
+     </div>
+</div>
+
+{{else}}
+    <h5>Nenhuma Postagem</h5>
+{{/each}}
+   
